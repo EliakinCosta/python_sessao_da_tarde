@@ -14,6 +14,7 @@
 			\item Suportam as operações básicas, mod, etc (+, -, *, /, \%, **, +=, -=, *=, /=,\%=, **=).
 			\item Operações entre diferentes tipo irão resultar no tipo mais complexo
 			\item Cuidado, números inteiros tem precisão infinita
+			\item Controle de fluxo e bool
 		\end{itemize}
 \end{itemize}
 \end{frame}
@@ -37,4 +38,42 @@
 	\item Vamos tentar um pouco de código
 \end{itemize}
 		\textbf{\text{Obs: Iremos focar apenas em listas}}
+\end{frame}
+
+\begin{frame}{Hackeando Listas com Python}
+	\centering \text{Cópia Rasa de listas}
+	\lstset{language=Python}
+	\lstinputlisting{code/referencia_objeto_lista.py}
+	\textbf{\text{Como resolver isso de uma maneira mais fácil?}}
+\end{frame}
+
+\begin{frame}{Hackeando Listas com Python}
+\begin{itemize}
+	\item 	Podemos usar fatiamento de iteráveis (slicing)
+	\item 	O fatiamento faz uma cópia de valor do iterável
+	\item 	Essa cópia é feita no primeiro nível
+	\item \textbf{\text{Python aceita níveis arbitrários em estrutura modificáveis}}
+	\item Vamos entender isso!!!
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hackeando Listas com Python}
+\begin{itemize}
+	\item 	O slicing muda a forma como percorremos uma lista
+	\item 	Mas e se precisarmos fazer verificações para filtrar a lista?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hackeando Listas com Python}
+\begin{itemize}
+	\centering \text{Obtendo Números pares de uma lista}
+	\lstset{language=Python}
+	\lstinputlisting{code/numeros_pares_errado.py}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hackeando Listas com Python}
+	\centering \text{Fazendo o mesmo de uma forma mais pythonica}
+	\lstset{language=Python}
+	\lstinputlisting{code/numeros_pares_certo.py}
 \end{frame}
