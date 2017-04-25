@@ -1,0 +1,23 @@
+\frametitle{Código Fonte: Códigos}
+\begin{lstlisting}
+    \begin{lstlisting}
+    \includecode[ansic]{codigos/ola.c}
+
+    \ansic
+    \begin{lstlisting}
+        int main(void){
+        printf("Ola mundo\n");
+        return 0;
+    }
+    \ end{lstlisting}
+    \end{lstlisting}
+
+    \begin{lstlisting}
+    \java
+    \begin{lstlisting}
+        public static voi main(String args[]){
+        System.out.println("Ola mundo");
+    }
+    \ end{lstlisting}
+    \end{lstlisting}
+

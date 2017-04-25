@@ -1,0 +1,122 @@
+% 2015-05-21 - Emerson Ribeiro de Mello - mello@ifsc.edu.br
+% \documentclass[handout,xcolor=pdftex,dvipsnames,table]{beamer}
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+% usando tema personalizado. 
+% arquivo beamerthemeIFSC.sty deve estar no mesmo diretório do .tex
+\usepackage{beamerthemeIFSC}
+\usepackage{tikz}
+\usepackage{xargs}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{soul} %fazer texto tachado
+\usepackage{epigraph}
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{brown},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\usepackage{xargs}
+%
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+%
+
+\hypersetup{pdfstartview={Fit},pdftitle={\@title},
+ 	pdfsubject={IFBA},pdfauthor={\@author}
+}
+
+\hyphenation{ob-je-ti-vo}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Python}
+\subtitle{Programando de forma idiomática}
+\author{Eliakin Costa}
+\date{26 de abril de 2017}
+\institute{Instituto Federal da Bahia\\
+campus Salvador\\
+\url{eliakincosta@ifba.edu.br}
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{frame}[t]
+	\maketitle
+\end{frame}
+
+% Descomente as linhas abaixo se desejar colocar um sumário de todas as seções
+\begin{frame}[t]{Agenda}
+\tableofcontents
+\end{frame}
+
+% O trecho de código abaixo serve para sobrescrever regras do template
+\def\sectionname{}
+\def\insertsectionnumber{}
+\def\subsectionname{}
+\def\insertsubsectionnumber{}
+
+\AtBeginSection{\frame{\sectionpage}\addtocounter{framenumber}{-1}}
+
+
+\AtBeginSubsection{\frame{\subsectionpage}\addtocounter{framenumber}{-1} }
+\AtBeginSubsubsection{\frame{\subsubsectionpage}\addtocounter{framenumber}{-1} }
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inicio do documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{secoes/00_APRESENTACAO}
+
+\section{Introdução}
+\include{secoes/00_INTRO}
+
+\section{Tipagem Dinâmica, mas nem tanto}
+\include{secoes/01_tipagem}
+
+\section{Tipos, Instruções e Estilo}
+\include{secoes/02_tipos_instrucoes_estilo}
+
+\section{Funções e Classes}
+\include{secoes/03_classes}
+
+\section{Ainda Tem muito mais}
+\include{secoes/04_PRATICAS}
+
+%Finalizando
+\include{secoes/05_FINAL}
+
+\end{document}

@@ -1,0 +1,165 @@
+\begin{frame}{Estruturas básicas}
+    \begin{alertblock}{Atenção!}
+        Antes de começar, uma informação importante!\\
+        O \LaTeX é \textit{case sensitive}!!!
+    \end{alertblock}
+\end{frame}  
+
+\begin{frame}{Estruturas básicas}
+    \begin{itemize}
+        \item A base dos comandos \LaTeX são iniciados com "$\backslash$"  (barra invertida)
+        \item Exemplo $\backslash$comando[arg opt]$\{$ $\}$
+        \item \textbf{Preâmbulo} é a parte inicial do documento fonte, é a área de que define os estilos e características do documento
+        \item \textbf{Corpo do Documento}, como o nome sugere, é a parte onde está toda parte relacionada ao documento em si (seções, parágrafos, sumário, recursos gráficos...)
+        \item \textbf{Referências}, apesar de ser definida (geralmente) no final do corpo do documento, a referência é uma recurso a parte da ferramenta e iremos ver detalhadamente mais a frente
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Corpo documento}
+    \begin{block}{}
+        $\backslash$documentclass[opcoes]$\{$estilo do documento$\}$
+        $\backslash$begin$\{$document$\}$\\
+        $...$\\
+        $\backslash$end$\{$document$\}$
+    \end{block}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Opções do documento}
+    \begin{block}{}
+        $\backslash$documentclass[papel, fonte, colunas]$\{$estilo do documento$\}$
+    \end{block}
+    \begin{itemize}
+        \item tipo do papel: a4paper, letterpaper, a5paper, b5paper
+        \item tamanho da fonte: 10pt, 11pt, 12pt, ...
+        \item colunas: onecolumn, twocolumn
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estruturas básicas: Outras opções}
+    \begin{block}{}
+        $\backslash$documentclass[papel, fonte, colunas]$\{$estilo do documento$\}$
+    \end{block}
+    \begin{itemize}
+        \item \textbf{landscape}: Orientação da Página;
+        \item \textbf{titlepage}: Página de título;
+        \item \textbf{leqno}: Numeração das fórmulas à esquerda (ao invés do padrão à direita);
+        \item \textbf{fleqn}: Alinhamento das fórmulas à esquerda (ao invés do padrão centralizado);
+        \item \textbf{openright}: Capítulos são iniciados apenas nas páginas ímpares;
+        \item \textbf{openany}: Capítulos são iniciados em páginas pares ou ímpares
+        
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estruturas básicas: Estilo do documento}
+    \begin{itemize}
+        \item article
+        \item report
+        \item book
+        \item letter
+        \item beamer \footnote{apresentação}
+        \item paper
+        \item amsart
+        \item amsbook
+        \item amsproc
+        \item proc
+        \item coursepaper 
+        \item entre muitos outros
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estruturas básicas: Exemplo}
+    \begin{block}{}
+        $\backslash$documentclass[a4paper, 12pt, twocolumn]$\{$article$\}$\\
+            $\backslash$begin$\{$document$\}$\\
+                Texto do documento\\
+            $\backslash$end$\{$document$\}$
+    \end{block}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Pacotes}
+    \begin{itemize}
+        \item Um dos melhores recursos do \LaTeX, porém pode se tornar problemático...
+        \item Conjunto de arquivos que implementam características adicionais para os documentos escritos em \LaTeX
+        \item  Para documentos mais elaborados --> comandos básicos não são suficientes
+        \item Alguns pacotes já vêm como distribuição básica do \LaTeX
+        \item Os demais podem ser encontrados separadamente
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Pacotes}
+    \begin{itemize}
+        \item Os pacotes são inseridos no \underline{Preâmbulo} do documento, utilizando o seguinte comando:
+    \end{itemize}
+    \begin{block}{}
+        $\backslash$usepackage[opções]$\{$nomePacote$\}$\\
+    \end{block}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Principais pacotes \footnote{Importante: É necessário verificar a compatibilidade dos pacotes com a versão\\ do \LaTeX}}
+    \begin{itemize}
+        \item \textbf{color}: Para usar cores no texto;
+        \item \textbf{babel}: Para traduzir termos que aparecem em inglês na estrutura do documento. Use a opção \textbf{[brazil]}.
+        \item \textbf{fontenc}: Permite que o \LaTeX a acentuação feita direto pelo teclado. É usado com o opcional [T1].
+        \item \textbf{amsfonts}: Define alguns estilos de letras para o ambiente matemático;
+        \item \textbf{graphicx}: Para usar gráficos no documento.
+        
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estruturas básicas: Espaçamento}
+    \begin{itemize}
+        \item Não está relacionado ao número de vezes que apertamos o "espaço"
+        \item No \LaTeX sempre será considerado \textbf{um espaço}!
+        \item Caso precise \ \ \  mais de um (acho que não): $\backslash $ $\backslash $ $\backslash $
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Estruturas básicas: Parágrafo e Quebra de Linha}
+    \begin{itemize}
+        \item Para criar um novo parágrafo, basta pular uma linha $<$ENTER$>$ ou utilizar o  comando $\backslash par$
+        \item O número de linhas "saltadas" não está relacionado ao número de vezes em que apertamos a tecla $<$ENTER$>$
+        \item No \LaTeX, isso não importa --> sempre será considerado apenas um!
+        \item O espaçamento é controlado pelo estilo do documento
+        \item Para inserir uma quebra de linha use $\backslash \backslash$ ou ainda o comando $\backslash newline$.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Parágrafo e Quebra de Linha}
+    \begin{itemize}
+        \item  Mais alguns comandos e coisas Interessantes
+        \begin{itemize}        
+            \item $\backslash$linebreak[$n$]: Força a quebra de linha
+            \item $\backslash$nolinebreak[$n$]: Ajusta o texto de forma a ignorar uma            possível quebra de linha
+            \item $\backslash$pagebreak[$n$]: Força a quebra de página
+            \item $\backslash$nopagebreak[$n$]: Ajusta o texto de forma a ignorar uma
+            possível quebra de página
+        \end{itemize}
+    \end{itemize}
+    \begin{block}{Importante!}
+        O argumento [$n$] pode ser um valor entre 0 e 4.\\ Se $n$ $<$ 4 o \LaTeX pode ignorar o comando se o resultado for muito ruim.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Parágrafo e Quebra de Linha}
+    \begin{itemize}
+        \item  As consequências da quebra de linha:
+        \begin{itemize}        
+            \item \textbf{overfull box}: Quando o \LaTeX não encontra nenhuma possibilidade satisfatória para produzir parágrafos totalmente retos (alinhamento justificado), então uma das linhas fica maior que as demais (muito comprida)
+            \item Isto acontece quando o \LaTeX não consegue adicionar um hífen (separação silábica)
+            \item Uma alternativa é usar o comando $\backslash$sloppy para aumentar o espaçamento entre as palavras
+            \item O resultado final não é o melhor, mas é totalmente aceitável na maioria das vezes            
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Estruturas básicas: Elementos de texto}
+    \begin{alertblock}{Vamos parar essa etapa por aqui... }
+        Essa etapa iremos continuar amanhã... \\
+        Algumas \textit{nuances} deste tema precisam ser vista com calma... =$)$
+    \end{alertblock}
+\end{frame}
