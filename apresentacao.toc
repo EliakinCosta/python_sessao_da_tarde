@@ -2,5 +2,5 @@
 \beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{4}{0}{1}
 \beamer@sectionintoc {2}{Tipagem Din\IeC {\^a}mica, mas nem tanto}{13}{0}{2}
 \beamer@sectionintoc {3}{Tipos, Instru\IeC {\c c}\IeC {\~o}es e Estilo}{19}{0}{3}
-\beamer@sectionintoc {4}{Fun\IeC {\c c}\IeC {\~o}es e Classes}{27}{0}{4}
-\beamer@sectionintoc {5}{Ainda Tem muito mais}{28}{0}{5}
+\beamer@sectionintoc {4}{Fun\IeC {\c c}\IeC {\~o}es e Classes}{29}{0}{4}
+\beamer@sectionintoc {5}{Ainda Tem muito mais}{36}{0}{5}

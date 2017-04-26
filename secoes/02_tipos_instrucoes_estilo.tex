@@ -52,28 +52,40 @@
 	\item 	Podemos usar fatiamento de iteráveis (slicing)
 	\item 	O fatiamento faz uma cópia de valor do iterável
 	\item 	Essa cópia é feita no primeiro nível
+	\item 	Para casos específicos pode-se usar deepcopy from copy
 	\item \textbf{\text{Python aceita níveis arbitrários em estrutura modificáveis}}
-	\item Vamos entender isso!!!
+	\item Vamos entender isso no quadro!!!
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Hackeando Listas com Python}
-\begin{itemize}
-	\item 	O slicing muda a forma como percorremos uma lista
-	\item 	Mas e se precisarmos fazer verificações para filtrar a lista?
-\end{itemize}
+\begin{frame}{Notas de sintaxe}
+	\centering \text{Atenção para a sintaxe}
+	\lstset{language=Python}
+	\lstinputlisting{code/notas_sintaxe.py}
+\end{frame}
+
+\begin{frame}{Notas de sintaxe}
+\centering \text{Atenção para a sintaxe}
+\lstset{language=Python}
+\lstinputlisting{code/notas_sintaxe_2.py}
 \end{frame}
 
 \begin{frame}{Hackeando Listas com Python}
-\begin{itemize}
+	\begin{itemize}
+		\item 	O slicing muda a forma como percorremos uma lista
+		\item 	Mas e se precisarmos fazer verificações para filtrar a lista?
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Hackeando Listas com Python}
 	\centering \text{Obtendo Números pares de uma lista}
 	\lstset{language=Python}
 	\lstinputlisting{code/numeros_pares_errado.py}
-\end{itemize}
 \end{frame}
 
 \begin{frame}{Hackeando Listas com Python}
-	\centering \text{Fazendo o mesmo de uma forma mais pythonica}
+	\centering \text{Fazendo o mesmo de uma forma mais pythônica}
 	\lstset{language=Python}
 	\lstinputlisting{code/numeros_pares_certo.py}
 \end{frame}
